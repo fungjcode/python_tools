@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+# -*-coding:UTF-8-*-
+
+# 风之翼灵
+# www.fungj.com
+
 """
 腾讯云 轻量云监控流量超标自动关机
 """
