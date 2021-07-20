@@ -41,7 +41,7 @@ def main(SecretId, SecretKey, region, InstanceIds):
                 SnapshotId = (get_rest['SnapshotSet'][1]['SnapshotId'])
                 DeleteSnapshots_re = DeleteSnapshots(SecretId, SecretKey, SnapshotId, region)
                 if DeleteSnapshots_re != False:
-                    #删除之前一个后，再进行备份
+                    # 删除之前一个后，再进行备份
                     print('已经删除完成快照ID为{0}的快照，现在准备开始备份实例'.format(SnapshotId))
                     CreateInstanceSnapshot(SecretId, SecretKey, region, InstanceIds)
         else:
@@ -49,7 +49,8 @@ def main(SecretId, SecretKey, region, InstanceIds):
             time.sleep(5)
             exit()
 
-def CreateInstanceSnapshot(SecretId, SecretKey, region,InstanceIds):
+
+def CreateInstanceSnapshot(SecretId, SecretKey, region, InstanceIds):
     """
     创建快照
     """
