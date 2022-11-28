@@ -31,12 +31,15 @@ def main(SecretId, SecretKey, region, InstanceIds):
     if get_rest != False:
         TotalCount = get_rest['TotalCount']
         # 快照数
-        if TotalCount < 2:
+        if TotalCount == 0:
+            # 直接备份
+            CreateInstanceSnapshot(SecretId, SecretKey, region, InstanceIds)
+        elif TotalCount == 1:
             # 直接备份
             CreateInstanceSnapshot(SecretId, SecretKey, region, InstanceIds)
         elif TotalCount == 2:
             # 删除之前较早一个备份,就是列表里的第二个,状态需要正常才能删除
-            SnapshotState = (get_rest['SnapshotSet'][1]['SnapshotState'])
+            SnapshotState = (get_rest['SnapshotSet'][0]['SnapshotState'])
             if SnapshotState == 'NORMAL':
                 SnapshotId = (get_rest['SnapshotSet'][1]['SnapshotId'])
                 DeleteSnapshots_re = DeleteSnapshots(SecretId, SecretKey, SnapshotId, region)
