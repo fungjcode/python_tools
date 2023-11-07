@@ -9,6 +9,7 @@ import urllib.request
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+# 监控地址
 url = 'https://app.cloudcone.com/vps/205/create?token=pre-bf-vps-23-2'
 
 DEFAULT_HEADERS = {
