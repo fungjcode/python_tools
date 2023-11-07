@@ -80,9 +80,9 @@ if __name__ == '__main__':
         <h4>cloudcone pre-bf-vps-23-2到货通知</h4>
         <p>库存更新时间：{code}</p>
         <p>购买地址：</p>
-        <p><h2><a href="https://app.cloudcone.com/vps/205/create?token=pre-bf-vps-23-2" target="_blank">链接</a></h2></p>
+        <p><h2><a href="{url}" target="_blank">链接</a></h2></p>
     </body>
     </html>
-    """.format(code=str(nowtime))
+    """.format(code=str(nowtime), url=url)
         # 执行
         main()
