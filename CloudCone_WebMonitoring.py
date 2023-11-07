@@ -60,9 +60,10 @@ def send_mail():
 
 
 # 执行方法
-nowtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+
 if __name__ == '__main__':
     while True:
+        nowtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         # 休眠时间
         time.sleep(185)
         print('---------' + str(nowtime) + ' 程序开始执行------------')
