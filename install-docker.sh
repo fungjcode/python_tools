@@ -4,8 +4,6 @@
 # 一键安装docker到Debian12的脚本
 # 国内用户注意docker源，该脚本基于官方安装脚本修改
 
-
-
 # Add Docker's official GPG key:
 apt-get update -y
 apt-get install ca-certificates curl gnupg -y
