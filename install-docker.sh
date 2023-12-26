@@ -22,5 +22,8 @@ apt-get update -y
 
 apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# Enable Docker at startup
+systemctl enable docker
+
 # Verify the Docker installation by running the hello-world image
 docker run hello-world
