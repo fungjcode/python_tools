@@ -25,3 +25,5 @@ systemctl enable docker
 
 echo "Verify the Docker installation by running the hello-world image"
 docker run hello-world
+
+echo "Installation complete"
