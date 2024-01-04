@@ -23,5 +23,5 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docke
 echo "Enable Docker at startup"
 systemctl enable docker
 
-echo "Verify the Docker installation by running the hello-world image "
+echo "Verify the Docker installation by running the hello-world image"
 docker run hello-world
